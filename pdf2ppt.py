@@ -14,7 +14,7 @@ from pathlib import Path
 from typing import Callable, Iterable
 
 
-VERSION = "1.5.0"
+VERSION = "1.5.1"
 APP_TITLE = f"PDF2PPT v{VERSION}"
 EMU_PER_POINT = 12700
 EMU_PER_INCH = 914400
@@ -375,6 +375,14 @@ class PDF2PPTApp:
         self.ttk = ttk
         self.root = root
         self.root.title(APP_TITLE)
+        icon_path = Path(getattr(sys, "_MEIPASS", Path(__file__).resolve().parent)) / "pdf2ppt-icon.png"
+        self.window_icon = None
+        if icon_path.exists():
+            try:
+                self.window_icon = self.tk.PhotoImage(file=str(icon_path))
+                self.root.iconphoto(True, self.window_icon)
+            except self.tk.TclError:
+                pass
         self.root.protocol("WM_DELETE_WINDOW", self._on_close)
 
         self.files: list[Path] = []

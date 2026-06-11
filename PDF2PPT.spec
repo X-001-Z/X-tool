@@ -27,7 +27,7 @@ a = Analysis(
     ["pdf2ppt.py"],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[("pdf2ppt-icon.png", ".")],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

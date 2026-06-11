@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.5.1 - 2026-06-11
+
+- Enlarged the PDF and PPT labels in the application icon.
+- Added a consistent transparent rounded-square outer shape.
+- Fixed the PPT label being partially covered by the conversion arrow.
+- Applied the icon explicitly to the application window.
+
 ## 1.5.0 - 2026-06-11
 
 - Replaced PyMuPDF with PDFium through pypdfium2.
