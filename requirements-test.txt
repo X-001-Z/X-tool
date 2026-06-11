@@ -1,0 +1,4 @@
+-r requirements-build.txt
+pikepdf==10.8.0
+reportlab==4.5.1
+charset-normalizer==3.4.7

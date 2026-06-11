@@ -1,0 +1,62 @@
+# -*- mode: python ; coding: utf-8 -*-
+
+excluded_modules = [
+    "IPython",
+    "certifi",
+    "chardet",
+    "cryptography",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "scipy",
+    "setuptools",
+    "yaml",
+    "fitz",
+    "pymupdf",
+    "PIL.AvifImagePlugin",
+    "PIL.ImageCms",
+    "PIL.ImageTk",
+    "PIL.WebPImagePlugin",
+    "PIL._avif",
+    "PIL._imagingcms",
+    "PIL._imagingtk",
+    "PIL._webp",
+]
+
+a = Analysis(
+    ["pdf2ppt.py"],
+    pathex=[],
+    binaries=[],
+    datas=[],
+    hiddenimports=[],
+    hookspath=[],
+    hooksconfig={},
+    runtime_hooks=[],
+    excludes=excluded_modules,
+    noarchive=False,
+    optimize=1,
+)
+pyz = PYZ(a.pure)
+
+exe = EXE(
+    pyz,
+    a.scripts,
+    a.binaries,
+    a.datas,
+    [],
+    name="PDF2PPT",
+    debug=False,
+    bootloader_ignore_signals=False,
+    strip=False,
+    upx=True,
+    upx_exclude=[],
+    runtime_tmpdir=None,
+    console=False,
+    disable_windowed_traceback=False,
+    argv_emulation=False,
+    target_arch=None,
+    codesign_identity=None,
+    entitlements_file=None,
+    icon="pdf2ppt.ico",
+    version="version_info.txt",
+)

@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+.venv-build/
+.pytest_cache/
+outputs/
+release/
+work/
+build/
+dist/
+*.spec.bak
+*.pdf
+*.pptx
+*.log
+Thumbs.db
+.DS_Store

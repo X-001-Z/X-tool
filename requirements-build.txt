@@ -1,0 +1,13 @@
+pypdfium2==5.9.0
+python-pptx==1.0.2
+Pillow==12.2.0
+lxml==6.1.1
+XlsxWriter==3.2.9
+typing-extensions==4.15.0
+PyInstaller==6.20.0
+pyinstaller-hooks-contrib==2026.6
+altgraph==0.17.5
+packaging==26.2
+pefile==2024.8.26
+pywin32-ctypes==0.2.3
+setuptools==82.0.1
